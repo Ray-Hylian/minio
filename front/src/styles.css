@@ -1,0 +1,17 @@
+#upload-progress-bar .p-progressbar .p-progressbar-value{
+    transition: ease-in-out 0.2s;
+}
+
+.snackbar-success{
+    background-color: #2ecc71;
+}
+
+.snackbar-error{
+    background-color: #e74c3c;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif, “Apple Color Emoji”, “Segoe UI Emoji”, “Segoe UI Symbol”;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

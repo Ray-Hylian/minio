@@ -1,0 +1,23 @@
+<div class="file-upload-container">
+    <div class="file-upload-bar">
+        <button mat-flat-button color="primary" (click)="openFileSelector()" [disabled]="disabled">
+            <input id="{{randomUUID}}" type="file" multiple (change)="inputFiles($event)" style="display: none"/>
+            <mat-icon>add</mat-icon>
+            <span *ngIf="!minifiedText">Ajouter des fichiers</span>
+        </button>
+        <button mat-flat-button color="primary" [disabled]="disabled || files.length == 0" (click)="handleUpload()">
+            <mat-icon>file_upload</mat-icon>
+            <span *ngIf="!minifiedText">Upload</span>
+        </button>
+        <button mat-flat-button color="primary" [disabled]="disabled || files.length == 0" (click)="files = []">
+            <mat-icon>close</mat-icon>
+            <span *ngIf="!minifiedText">Annuler</span>
+        </button>
+    </div>
+    <div class="file-upload-dragndrop" (filesDropped)="addFiles($event)" [disabled]="disabled" dragndrop>
+        <div class="file-upload-file" *ngFor="let file of files; index as i">
+            {{file.name}}
+            <button mat-icon-button (click)="removeFile(i)"><mat-icon>delete</mat-icon></button>
+        </div>
+    </div>
+</div>

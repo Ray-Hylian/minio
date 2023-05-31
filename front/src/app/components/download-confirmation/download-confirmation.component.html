@@ -1,0 +1,13 @@
+<div id="container">
+    <div id="loading-message" *ngIf="loadingMessage">{{loadingMessage}}</div>
+    <div id="progressbar-container">
+        <mat-progress-bar id="upload-progress-bar" mode="determinate" [value]="progress"></mat-progress-bar>
+    </div>
+</div>
+
+<!-- <div id="container">
+    <div id="loading-message" *ngIf="loadingMessage">{{loadingMessage}}</div>
+    <div id="progressbar-container">
+        <p-progressBar id="upload-progress-bar" styleClass="p-disabled" [value]="progress"></p-progressBar>
+    </div>
+</div> -->

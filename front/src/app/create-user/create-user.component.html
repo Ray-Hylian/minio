@@ -1,0 +1,13 @@
+<div class="card">
+    <form ngNativeValidate class="create-user-form" [formGroup]="createUserForm" (ngSubmit)="onSubmit()"  >
+        <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput id="name" formControlName="name" type="text" placeholder="Nom complet" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput id="email" formControlName="email" type="email" placeholder="Email" required />
+        </mat-form-field>
+        <button mat-flat-button color="primary">Créer</button>
+    </form>
+</div>

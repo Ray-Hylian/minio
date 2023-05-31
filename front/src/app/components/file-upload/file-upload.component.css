@@ -1,0 +1,45 @@
+.file-upload-container{
+    display: block;
+    width: 800px;
+    min-height: 400px;
+    margin: 4px;
+    --accent-color: rgb(220, 220, 220);
+}
+
+.file-upload-bar{
+    border: 1px var(--accent-color) solid;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 80px;
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+}
+
+.file-upload-bar button{
+    margin: 10px;
+}
+
+.file-upload-bar button[disabled="true"]{
+    cursor: no-drop;
+}
+
+.file-upload-dragndrop{
+    min-height: 320px;
+    border: 1px var(--accent-color) solid;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.file-upload-file{
+    padding: 10px;
+    border-bottom: 1px solid var(--accent-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-upload-file button{
+    float: right;
+}

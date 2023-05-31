@@ -1,0 +1,7 @@
+<nav mat-tab-nav-bar *ngIf="!hideMenu">
+    <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.routerLink" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+        <mat-icon *ngIf="link.icon" >{{link.icon}}</mat-icon>
+        {{link.label}}
+    </a>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,9 @@
+export const publicKey : string = "-----BEGIN PUBLIC KEY-----\
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz7eWtyq5PumOsTXM7Uj8\
+xVHtc5CLB58iC/HR+i66VpJV4sxDpwHQMzJmcZcncb9gCZlJCiOTHg17mCbvNxqu\
+FZeHKlxsvRaY6bBcDc8n5zWOsUxExYAtTMMAkN+je6FuvqIkGc3m05yMNKws8cGN\
+VaaAJ+jZQcX+DjV8D6sm/iqxqLGA45/ux9d4XrS48mTuJeVrdw3/Y9GOsat58OEJ\
+dabyPeyHyFoQxO60fpsCDkdCX/2XVwS7RYPzg6mMwTP9eU9WH1GuUOWTEFojAbjg\
+qfFPJxhRgh9sMNOkyBYgvhwSps0rGLUHDzM7VT7iYoI2xtTie2iC/z/BCCzx32DY\
+xwIDAQAB\
+-----END PUBLIC KEY-----";

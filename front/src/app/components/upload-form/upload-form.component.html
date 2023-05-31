@@ -1,0 +1,40 @@
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Utilisateur</mat-label>
+    <input type="text"
+            placeholder="Jean Paul"
+            aria-label="Utilisateur"
+            matInput
+            (keyup)="updateOptions()"
+            [formControl]="userFormControl"
+            [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="selectUser($event)">
+        <mat-option *ngFor="let user of users" [value]="user">
+            {{user.name}}
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+
+<form [formGroup]="metadataForm">
+    <div formArrayName="metadataArray">
+        <div *ngFor="let control of metadataArray.controls; index as i" [formGroupName]="i">
+            <div class="p-field">
+                <mat-form-field appearance="fill">
+                    <mat-label>Clé</mat-label>
+                    <input matInput id="key-{{i}}" formControlName="key" type="text" placeholder="Clé"/>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Valeur</mat-label>
+                    <input matInput id="value-{{i}}" formControlName="value" type="text" placeholder="Valeur"/>
+                </mat-form-field>
+                <button *ngIf="i != 0" mat-flat-button color="warn" (click)="metadataArray.removeAt(i)"><mat-icon>delete</mat-icon></button>
+            </div>
+        </div>
+    </div>
+    <button mat-fab color="primary" (click)="addMetadataField()"><mat-icon>add</mat-icon></button>
+</form>
+<file-upload #fileUpload (uploadHandler)="upload($event, fileUpload)" [disabled]="selectedUser==null"></file-upload>
+<ng-template #uploadDialog>
+    <header>Téléversement en cours</header>
+    <mat-progress-bar id="upload-progress-bar" mode="determinate" [value]="progress"></mat-progress-bar>
+    <button mat-flat-button color="warn" (click)="cancelUpload()"><mat-icon>close</mat-icon>Annuler</button>
+</ng-template>
